@@ -12,14 +12,15 @@
   }
 
   header {
-      background-color: #000000;
+    background: linear-gradient(to bottom right, #6c6c6d, #070707);
       padding-bottom: 40px;
       padding-top: 20px;
       height: 25px;
-      border: 1px solid rgb(255, 255, 255);
+     
     overflow: hidden;
 
   }
+  
 
   header nav ul h1 {
       display: flex;
@@ -56,7 +57,7 @@
   header nav ul input {
       border-radius: 1px;
       border-style: solid;
-      border-color: #ffffff;
+    
       position: relative;
       right: 10vw;
       width: 25vw;
@@ -66,7 +67,7 @@
       text-decoration: none;
       border-radius: 20px;
       text-align: left;
-      border: solid 2px rgb(255, 255, 255);
+     
   }
 
   footer {
@@ -74,8 +75,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #000000;
-      border: 0.5px solid rgb(255, 255, 255);
+      background: linear-gradient(to bottom right, #6c6c6d, #070707);
+     
       height: 12vh;
 
   }
@@ -87,12 +88,11 @@
   }
 
   main {
-      border: 1px solid rgb(62, 144, 208);
-      background-color: #EAFDFC;
+      
+    background: linear-gradient(to bottom right, #b4b4d4, #756363);
       min-height: calc(100vh - 75px - 12vh);
 
   }
-
   
   /* Add some padding inside the card container */
   .container {
@@ -100,10 +100,10 @@
   }
 
   main .container .firstcard {
-      background-color: #824D74;
+    background: linear-gradient(to bottom right, #6c6c6d, #070707);
       border-radius: 20px;
       margin: 20px 20px;
-      border: 1px solid rgb(0, 145, 255);
+      border: 1px solid rgb(2, 2, 2);
 
   }
 
@@ -139,6 +139,7 @@
       margin-top: 10px;
       width: 150px;
       height: 150px;
+      
   }
 
   /* Slideshow container */
@@ -252,13 +253,18 @@
           opacity: 1
       }
   }
-
-  .card-items ul {
-      font-family: 'Be Vietnam Pro', sans-serif;
-      list-style-type: none;
-      position: relative;
-      bottom: 20px;
-      box-sizing: border-box;
-
+  .card-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text horizontally */
+    
   }
   
+  .card-items img {
+    max-width: 100%;
+  }
+  
+  .card-items .titre {
+    margin-top: 10px; /* Adjust as needed */
+  }

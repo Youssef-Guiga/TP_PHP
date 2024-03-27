@@ -43,56 +43,25 @@
 
  showSlides(slideIndex);
 
- function filterItems() {
-    // Get the input value from the search bar
-    var input = document.getElementById("searchInput").value.trim().toLowerCase();
-    
-    // Get all elements with the class name matching the input value
-    var trikouetItems = document.querySelectorAll(".trikouet .card-items");
-    var klassetItems = document.querySelectorAll(".klasset .card-items");
-    var firstContainer = document.querySelector(".first");
-    var secondContainer = document.querySelector(".second");
+ function filterCards() {
+  // Get the search input value
+  var input = document.getElementById('searchInput').value.toUpperCase();
   
-    // Hide all items and both containers
-    hideAllItems();
-    firstContainer.style.display = "none";
-    secondContainer.style.display = "none";
+  // Get all elements with the class name "titre"
+  var titles = document.getElementsByClassName('titre');
 
-    // Show only the items and container corresponding to the search term
-    if (input === "trikouet") {
-      trikouetItems.forEach(function(item) {
-        item.style.display = ""; // Empty string removes inline display style
-      });
-      firstContainer.style.display = "block"; // Show the first container
-    } else if (input === "klasset") {
-      klassetItems.forEach(function(item) {
-        item.style.display = ""; // Empty string removes inline display style
-      });
-      secondContainer.style.display = "block"; // Show the second container
-    } else if (input === "") {
-      // If the search bar is empty, show all items and containers
-      showAllItems();
-      firstContainer.style.display = "block";
-      secondContainer.style.display = "block";
+  // Loop through all titles
+  for (var i = 0; i < titles.length; i++) {
+    // Get the text content of the title and convert it to uppercase
+    var txtValue = titles[i].textContent || titles[i].innerText;
+    
+    // Check if the title matches the search input
+    if (txtValue.toUpperCase().indexOf(input) > -1) {
+      // If the title matches, display the parent element
+      titles[i].parentNode.style.display = "";
+    } else {
+      // If the title doesn't match, hide the parent element
+      titles[i].parentNode.style.display = "none";
     }
-}
-
-function hideAllItems() {
-    // Get all elements with the class "card-items"
-    var allItems = document.querySelectorAll(".card-items");
-    
-    // Hide all items
-    allItems.forEach(function(item) {
-        item.style.display = "none";
-    });
-}
-
-function showAllItems() {
-    // Get all elements with the class "card-items"
-    var allItems = document.querySelectorAll(".card-items");
-    
-    // Show all items
-    allItems.forEach(function(item) {
-        item.style.display = "";
-    });
+  }
 }   
