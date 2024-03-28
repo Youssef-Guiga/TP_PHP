@@ -12,7 +12,7 @@
   }
 
   header {
-    background: linear-gradient(to bottom right, #6c6c6d, #070707);
+    background: linear-gradient(to bottom right, #4709f3, #470f6d);
       padding-bottom: 40px;
       padding-top: 20px;
       height: 25px;
@@ -75,7 +75,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(to bottom right, #6c6c6d, #070707);
+      background: linear-gradient(to bottom right, #4709f3, #470f6d);
      
       height: 12vh;
 
@@ -89,7 +89,7 @@
 
   main {
       
-    background: linear-gradient(to bottom right, #b4b4d4, #756363);
+    background: linear-gradient(to bottom right, #dde3eb, #313131);
       min-height: calc(100vh - 75px - 12vh);
 
   }
@@ -100,7 +100,7 @@
   }
 
   main .container .firstcard {
-    background: linear-gradient(to bottom right, #6c6c6d, #070707);
+    background: linear-gradient(to bottom right, #4709f3, #470f6d);
       border-radius: 20px;
       margin: 20px 20px;
       border: 1px solid rgb(2, 2, 2);

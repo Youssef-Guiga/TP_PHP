@@ -1,36 +1,35 @@
 
 
-<?php
+  <?php
+    session_start();
+  include ("connection.php");
 
-include ("connection.php");
+  if (isset($_POST['submit'])) 
+  {
+      $email = $_POST['email'];
+      $pass = $_POST['password'];
 
-if (isset($_POST['submit'])) 
-{
-    $email = $_POST['email'];
-    $pass = $_POST['password'];
+      $loginquery = "SELECT * FROM users WHERE email=:email AND password=:password";  
+    $statement=$conn->prepare($loginquery);
 
-    $loginquery="SELECT * FROM users WHERE email='$email' AND password='$pass'";
-    $loginres = $conn->query($loginquery);
-
-    echo $loginres->num_rows;
-
-    if ($loginres->num_rows ==1) 
-    {
-
-      header("Location: authentverif.html");
+    $statement->bindParam(':email', $email);
+    $statement->bindParam(':password', $pass);
+    $statement->execute();
+    $resu=$statement->fetch(PDO::FETCH_ASSOC);
+     
+    if($resu){
+      $_SESSION['user'] = $resu['username'];
+      header("Location: home.php");
       exit();
-    }
-    else
-    {
-        header("Location: authentinverif.html");
+    }else{
+      header("Location: authentinverif.html");
         exit();
     }
-    $conn->close();
-}
+
+     $conn=NULL;}
 
 
 
 
-
-?>
+  ?>
 
