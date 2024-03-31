@@ -8,9 +8,9 @@
     $confpass = $_POST['confpass'];
 
     $dbusername="SELECT * FROM users WHERE username:=username";
-    $statementusername=$conn->prepare($dbusername);
-    $statementusername = $conn->prepare($dbusername);
-$statementusername->bindParam(':username', $username);
+    $statementusername=$conn->prepare($dbusername);//t5Alink texecuti el statement b akther men parametre akther men marra
+   
+$statementusername->bindParam(':username', $username);// sql injection
 $statementusername->execute();
 $numusers = $statementusername->rowCount();
 

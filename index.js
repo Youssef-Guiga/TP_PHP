@@ -44,24 +44,18 @@
  showSlides(slideIndex);
 
  function filterCards() {
-  // Get the search input value
   var input = document.getElementById('searchInput').value.toUpperCase();
-  
-  // Get all elements with the class name "titre"
-  var titles = document.getElementsByClassName('titre');
 
-  // Loop through all titles
+  var titles = document.getElementsByClassName('titre');
   for (var i = 0; i < titles.length; i++) {
-    // Get the text content of the title and convert it to uppercase
     var txtValue = titles[i].textContent || titles[i].innerText;
-    
-    // Check if the title matches the search input
+
     if (txtValue.toUpperCase().indexOf(input) > -1) {
-      // If the title matches, display the parent element
       titles[i].parentNode.style.display = "";
     } else {
-      // If the title doesn't match, hide the parent element
       titles[i].parentNode.style.display = "none";
     }
   }
 }   
+
+

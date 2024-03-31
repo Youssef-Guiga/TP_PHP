@@ -1,3 +1,5 @@
+<?php    session_start(); ?>
+
 <!DOCTYPE html>   
 <html lang="en">
   <head>
@@ -22,10 +24,10 @@
     </header>
     <main>
       <div class="container">
-      <!-- Slideshow container -->
+    
 <div class="slideshow-container">
 
-  <!-- Full-width images with number and caption text -->
+ 
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
     <img class= "sliderimg" src="./pict/1.jpg" style="width:100%" >
@@ -44,68 +46,38 @@
     <div class="text">SUR COMMANDE</div>
   </div>
 
-  <!-- Next and previous buttons -->
+
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
 
 <div class="first">
       <div class="trikouet firstcard">
-        <h2> TRIKOUET </h2>
-       
+        <h2 class="salem"> TRIKOUET </h2>
+        <?php
+        include("connection.php");
+        
+        try {
+            $statement = $conn->query('SELECT * FROM products');
+            $products = $statement->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            die("Error: " . $e->getMessage());
+        }
         
         
-    <div class="card-items">
-      <img src="./pict/trikou.webp" alt="">
-      <p class="titre">trikou1</p>
-    </div>
-    <div class="card-items">
-      <img src="./pict/trikou.webp" alt="">
-      <p class="titre">trikou2</p>
-    </div>
-    <div class="card-items">
-      <img src="./pict/trikou.webp" alt="">
-      <p class="titre">trikou3</p>
-    </div>
-    <div class="card-items">
-      <img src="./pict/trikou.webp" alt="">
-      <p class="titre">trikou4</p>
-    </div>
-    <div class="card-items">
-      <img src="./pict/klasser.jpg" alt="">
-      <p class="titre">trikou5</p>
-    </div>
-    <div class="card-items">
-        <img src="./pict/trikou.webp" alt="">
-        <p class="titre">trikou6</p>
-      </div>
-      <div class="card-items">
-        <img src="./pict/klasser.jpg" alt="">
-        <p class="titre">trikou8</p>
-      </div>
-      <div class="card-items">
-        <img src="./pict/trikou.webp" alt="">
-        <p class="titre">trikou7</p>
-      </div>
-      <div class="card-items">
-        <img src="./pict/klasser.jpg" alt="">
-        <p class="titre">trikou8</p>
-      </div>
-      <div class="card-items">
-        <img src="./pict/trikou.webp" alt="">
-        <p class="titre">trikou8</p>
-      </div>
-      <div class="card-items">
-        <img src="./pict/klasser.jpg" alt="">
-        <p class="titre">trikou8</p>
-      </div>
-      <div class="card-items">
-        <img src="./pict/trikou.webp" alt="">
-        <p class="titre">trikou8</p>
-      </div>
-  </div>
-</div>
-    </div>
+        foreach ($products as $product) {
+          echo '<div class="card-items">';
+          echo '<img src="' . $product['image'] . '" alt="' . $product['name'] . '">';
+          echo '<p class="titre">' . $product['name'] . '</p>';
+          echo '<p>' . $product['price'] . '</p>';
+          echo '</div>';
+        }
+        
+        
+        ?>
+        
+        
+    
       </div>
     </div>
    

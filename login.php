@@ -13,7 +13,7 @@
     $statement=$conn->prepare($loginquery);
 
     $statement->bindParam(':email', $email);
-    $statement->bindParam(':password', $pass);
+    $statement->bindParam(':password', $pass);//to prevent sql injection
     $statement->execute();
     $resu=$statement->fetch(PDO::FETCH_ASSOC);
      

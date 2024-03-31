@@ -1,0 +1,121 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom right, #4709f3, #470f6d);
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+  height: 100vh; 
+}
+
+ .user-details, .product {
+  background-color: rgba(62, 70, 132, 0.8);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+ .user-details:hover, .product:hover {
+  transform: translateY(-5px);
+}
+
+.user-details p, .product p {
+  margin: 5px 0;
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form {
+  text-align: center;
+  margin-top: 10px;
+}
+
+input[type="submit"] {
+  background-color: #ffffff;
+  color: black;
+  border: none;
+  margin-top: 6px;
+  padding: 12px 24px; 
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #5b5b5c;
+}
+
+.wrapper {
+  background-color: rgba(62, 70, 132, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #3e4684;
+}
+
+.product img {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+.user-details {
+  align-items: center;
+  text-align: center;
+  font-size: 2.5cm;
+}
+
+
+.empty-cart{
+  width: 300px; 
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: auto;
+  position: fixed;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center; 
+  color: black;
+  font-size: 18px; 
+  line-height: 1.5; 
+    
+
+}
+.minus-btn, .plus-btn,.generate{
+  background-color: #ffffff;
+  color: black;
+  border: none;
+  padding: 12px 24px; 
+  border-radius: 5px;
+  cursor: pointer;
+ 
+}
+.rmv{
+  padding-top: 10px;
+}
+
+.receip{
+  text-align: center;
+}
