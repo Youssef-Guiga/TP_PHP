@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="contact.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+
+<div class="container">
+
+
+    <h1>Get in touch with us</h1>
+    <a href="home.php">home</a>
+
+    <div class="contactBox">
+
+        <div class="contactLeft">
+            <p class="title"> Send us a message</p>
+            <p class="message">We would love to respond to your messages.Feel free to get in touch with us</p>
+
+            <form class="form" action="contact.php" method="POST">
+
+                <div class="inputRow">
+                    <div class="inputGroup">
+                        <label>Name</label>
+                        <input type="text" name="name" placeholder="joumana">
+                    </div>
+
+                    <div class="inputGroup">
+                        <label>Phone</label>
+                        <input type="text" name="phone" placeholder="55394499">
+                    </div>
+                </div>
+
+                <div class="inputRow">
+                    <div class="inputGroup">
+                        <label>Email</label>
+                        <input type="text" name="email" placeholder="joumana@blabla">
+                    </div>
+
+                    <div class="inputGroup">
+                        <label>Subject</label>
+                        <input type="text" name="subject" placeholder="blablabla">
+                    </div>
+                </div>
+
+                <label>Message</label>
+                <textarea rows="5" name="message" placeholder="Your message"></textarea>
+
+                <button class="submit" name="submit">Submit</button>
+            </form>
+
+
+        </div>
+
+        <div class="contactRight">
+            <p class="title">Contact information</p>
+            <table>
+                <tr>
+                    <td><span><ion-icon name="mail"></ion-icon></span></td>
+                    <td><a href="joumanafradi99@gmail.com">joumanafradi99@gmail.com</a></td>
+                </tr>
+
+                <tr>
+                    <td><span><ion-icon name="call"></ion-icon></span></td>
+                    <td><a href="tel:+21655394499">+216 55394499</a></td>
+                </tr>
+
+                <tr>
+                    <td><span><ion-icon name="location"></ion-icon></span></td>
+                    <td>
+
+                        <a href="https://www.google.com/maps/place/National+Institute+of+Applied+Science+and+
+                        Technology/@36.8429605,10.194446,17z/data=!3m1!4b1!4m6!3m5!1s0x12fd34c6d1e93bef:0x4153c
+                        4733f285343!8m2!3d36.8429605!4d10.1970209!16s%2Fm%2F0h52xyw?authuser=0&entry=ttu">blabla,soussa,tunisie</a>
+                    </td>
+                </tr>
+
+            </table>
+
+            <ul class="socialmedia">
+                <li><a href="https://www.facebook.com/">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+                <li><a href="https://www.facebook.com/">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+                <li><a href="https://www.facebook.com/">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+
+            </ul>
+
+
+        </div>
+    </div>
+</div>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
