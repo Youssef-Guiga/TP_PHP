@@ -17,8 +17,9 @@
           <h1>ERRET BAZ'ART</h1>
           <input id="searchInput" type="text" placeholder="Search" oninput="filterCards()" />
           <li><a href="login.html">login</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="signup.html">Sign up</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          
         </ul>
       </nav>
     </header>
@@ -53,7 +54,7 @@
 
 <div class="first">
       <div class="trikouet firstcard">
-        <h2 class="salem"> TRIKOUET </h2>
+        <h2 class="salem"> PRODUCTS </h2>
         <?php
         include("connection.php");
         
